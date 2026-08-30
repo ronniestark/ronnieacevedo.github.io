@@ -25,7 +25,7 @@ const Inicio = ({ setActiveTab }) => {
       
       {/* Párrafo de Descripción - Reducción en celulares */}
       <p className="max-w-2xl text-slate-300 text-base md:text-lg leading-relaxed px-2">
-        Con 4 años de experiencia, no me limito a escribir código; transformo reglas de negocio complejas en sistemas resilientes, escalables y de alto rendimiento.
+        Con 5 años de experiencia, no me limito a escribir código; transformo reglas de negocio complejas en sistemas resilientes, escalables y de alto rendimiento.
       </p>
       
       {/* Botón de Acción - Padding y texto ajustable */}
