@@ -80,7 +80,7 @@ const Portfolio = () => {
         </main>
 
         {/* Footer integrado */}
-        <Footer />
+        <Footer setActiveTab={setActiveTab} />
       </div>
     </div>
   );
