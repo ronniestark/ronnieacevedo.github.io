@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Home, Lightbulb, Code2, Layout, Phone } from 'lucide-react';
+import { Home, Lightbulb, Code2, Layout, Phone, Briefcase } from 'lucide-react';
 
 // Importaciones de los componentes modulares
 import Inicio from '../components/Inicio';
@@ -8,6 +8,7 @@ import Habilidades from '../components/Habilidades';
 import Proyectos from '../components/Proyectos';
 import Contacto from '../components/Contacto';
 import Footer from '../components/Footer';
+import Experiencia from '../components/Experiencia';
 
 const Portfolio = () => {
   const [activeTab, setActiveTab] = useState('inicio');
@@ -15,27 +16,30 @@ const Portfolio = () => {
   const navItems = [
     { id: 'inicio', label: 'Inicio', icon: Home },
     { id: 'ideologia', label: 'Mi Filosofía', icon: Lightbulb },
+    { id: 'experiencia', label: 'Experiencia', icon: Briefcase },
     { id: 'habilidades', label: 'Habilidades', icon: Code2 },
     { id: 'portafolio', label: 'Portafolio', icon: Layout },
     { id: 'contacto', label: 'Contacto', icon: Phone }
   ];
 
-  const renderContent = () => {
-    switch (activeTab) {
-      case 'inicio':
-        return <Inicio setActiveTab={setActiveTab} />;
-      case 'ideologia':
-        return <Filosofia />;
-      case 'habilidades':
-        return <Habilidades />;
-      case 'portafolio':
-        return <Proyectos />;
-      case 'contacto':
-        return <Contacto />;
-      default:
-        return null;
-    }
-  };
+ const renderContent = () => {
+  switch (activeTab) {
+    case 'inicio':
+      return <Inicio setActiveTab="{setActiveTab}"/>;
+    case 'ideologia':
+      return <Filosofia/>;
+    case 'experiencia':         
+      return <Experiencia/>;   
+    case 'habilidades':
+      return <Habilidades/>;
+    case 'portafolio':
+      return <Proyectos/>;
+    case 'contacto':
+      return <Contacto/>;
+    default:
+      return null;
+  }
+};
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-200 font-sans selection:bg-blue-500/30 relative overflow-hidden flex flex-col">
