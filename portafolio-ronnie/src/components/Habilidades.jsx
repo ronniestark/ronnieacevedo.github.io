@@ -19,7 +19,7 @@ const Habilidades = () => {
             <Server className="text-cyan-400 w-4 h-4 sm:w-5 sm:h-5" /> Backend & Arquitectura
           </h3>
           <div className="flex flex-wrap gap-1.5 sm:gap-2">
-            {['C#', '.NET (Core/8/9)', 'Java', 'C/C++', 'ASP.NET Core', 'EF Core', 'CQRS (MediatR)', 'DDD', 'REST APIs', 'Arquitectura Limpia'].map(tech => (
+            {['C#', '.NET (Core/8/9)', 'Java', 'C/C++', 'ASP.NET Core', 'ASP.NET MVC', 'EF Core', 'CQRS (MediatR)', 'DDD', 'REST APIs', 'Arquitectura Limpia', 'JWT / Seguridad'].map(tech => (
               <span key={tech} className="px-2.5 sm:px-3 py-1 sm:py-1.5 bg-slate-800/80 border border-slate-700 rounded-full text-[11px] sm:text-xs font-medium text-slate-300 hover:text-white hover:border-cyan-400 hover:bg-cyan-500/20 hover:-translate-y-0.5 transition-all duration-300 cursor-default shadow-sm">
                 {tech}
               </span>
@@ -33,7 +33,7 @@ const Habilidades = () => {
             <LayoutTemplate className="text-blue-400 w-4 h-4 sm:w-5 sm:h-5" /> Frontend & UI
           </h3>
           <div className="flex flex-wrap gap-1.5 sm:gap-2">
-            {['Angular', 'React', 'Vue.js', 'Quasar Framework', 'TypeScript', 'JavaScript', 'HTML5/CSS3', 'Tailwind CSS'].map(tech => (
+            {['Angular', 'React', 'Vue.js', 'Quasar Framework', 'Vuetify', 'TypeScript', 'JavaScript', 'HTML5/CSS3', 'Tailwind CSS', 'SCSS'].map(tech => (
               <span key={tech} className="px-2.5 sm:px-3 py-1 sm:py-1.5 bg-slate-800/80 border border-slate-700 rounded-full text-[11px] sm:text-xs font-medium text-slate-300 hover:text-white hover:border-blue-400 hover:bg-blue-500/20 hover:-translate-y-0.5 transition-all duration-300 cursor-default shadow-sm">
                 {tech}
               </span>
@@ -61,7 +61,7 @@ const Habilidades = () => {
             <Wrench className="text-purple-400 w-4 h-4 sm:w-5 sm:h-5" /> Herramientas & IDEs
           </h3>
           <div className="flex flex-wrap gap-1.5 sm:gap-2">
-            {['Visual Studio', 'VS Code', 'IntelliJ IDEA', 'Android Studio', 'SSMS', 'Postman', 'Git', 'GitHub', 'NVM'].map(tech => (
+            {['Visual Studio', 'VS Code', 'IntelliJ IDEA', 'Android Studio', 'SSMS', 'Postman', 'Git', 'GitHub', 'GitLab', 'CI/CD', 'NVM'].map(tech => (
               <span key={tech} className="px-2.5 sm:px-3 py-1 sm:py-1.5 bg-slate-800/80 border border-slate-700 rounded-full text-[11px] sm:text-xs font-medium text-slate-300 hover:text-white hover:border-purple-400 hover:bg-purple-500/20 hover:-translate-y-0.5 transition-all duration-300 cursor-default shadow-sm">
                 {tech}
               </span>
