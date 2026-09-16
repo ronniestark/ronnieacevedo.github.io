@@ -23,6 +23,27 @@ const Proyectos = () => {
       tech: "C#",
       color: "bg-purple-500",
       visibility: "Private"
+    },
+    {
+      title: "TiendaImpresion3D",
+      desc: "API para tienda de impresion 3d.",
+      tech: "C#",
+      color: "bg-purple-500",
+      visibility: "Public"
+    },
+    {
+      title: "tienda-3d",
+      desc: "proyecto de emprendimiento tienda 3d.",
+      tech: "SCSS",
+      color: "bg-pink-500",
+      visibility: "Public"
+    },
+    {
+      title: "SistemaGim",
+      desc: "Sistema de gestión para gimnasio.",
+      tech: "C#",
+      color: "bg-purple-500",
+      visibility: "Public"
     }
   ];
 
