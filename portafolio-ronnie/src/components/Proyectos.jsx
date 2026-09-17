@@ -12,7 +12,7 @@ const Proyectos = () => {
     },
     {
       title: "EmailClassifierAPI",
-      desc: "Api para detectar y clasificar correos",
+      desc: "API RESTful integrada con Google Cloud y entrenada con ML.NET para la sincronización, análisis y clasificación predictiva de bandejas de correo.",
       tech: "C#",
       color: "bg-purple-500",
       visibility: "Public"
@@ -26,28 +26,28 @@ const Proyectos = () => {
     },
     {
       title: "PrismaProyecto",
-      desc: "Sistema empresarial de automatización para la gestión de seguros obligatorios.",
+      desc: "Sistema empresarial diseñado para automatizar alertas de vencimiento, optimizar la administración de pólizas y agilizar la gestión de seguros obligatorios.",
       tech: "C#",
       color: "bg-purple-500",
       visibility: "Private"
     },
     {
       title: "TiendaImpresion3D",
-      desc: "API para tienda de impresion 3d.",
+      desc: "Arquitectura backend desarrollada para soportar la lógica de negocio, catálogo de piezas y procesamiento de órdenes de una plataforma de impresión 3D.",
       tech: "C#",
       color: "bg-purple-500",
       visibility: "Public"
     },
     {
       title: "tienda-3d",
-      desc: "proyecto de emprendimiento tienda 3d.",
+      desc: "Interfaz web moderna y optimizada en UX/UI para un modelo de negocio B2C enfocado en la venta de productos manufacturados en 3D.",
       tech: "SCSS",
       color: "bg-pink-500",
       visibility: "Public"
     },
     {
       title: "SistemaGim",
-      desc: "Sistema de gestión para gimnasio.",
+      desc: "Plataforma administrativa orientada a centros de acondicionamiento físico, diseñada para gestionar membresías, perfiles de clientes y facturación de manera eficiente.",
       tech: "C#",
       color: "bg-purple-500",
       visibility: "Public"

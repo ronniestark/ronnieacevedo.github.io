@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { ChevronRight } from 'lucide-react';
+import { ChevronRight, Terminal } from 'lucide-react';
 
 // Componente para el efecto de fondo de código flotante
 const FloatingCode = () => {
@@ -14,9 +14,7 @@ const FloatingCode = () => {
       left: `${Math.random() * 100}%`,
       animationDuration: `${Math.random() * 10 + 15}s`,
       animationDelay: `${Math.random() * 15}s`,
-      // 1. Aumentamos el tamaño base de la fuente para que se lean mejor
       fontSize: `${Math.random() * 2 + 1.2}rem`, 
-      // 2. Aumentamos drásticamente la opacidad (ahora entre 0.3 y 0.7)
       opacity: Math.random() * 0.4 + 0.3, 
     }));
     
@@ -37,7 +35,6 @@ const FloatingCode = () => {
       {particles.map((p) => (
         <div
           key={p.id}
-          // 3. Cambiamos text-blue-500/30 a text-blue-400 y agregamos font-bold
           className="absolute text-blue-400 font-mono font-bold select-none"
           style={{
             left: p.left,
@@ -46,7 +43,6 @@ const FloatingCode = () => {
             '--max-opacity': p.opacity,
             animation: `float-up ${p.animationDuration} linear infinite`,
             animationDelay: p.animationDelay,
-            // 4. Añadimos un pequeño resplandor para que destaquen más
             textShadow: '0 0 10px rgba(96, 165, 250, 0.5)'
           }}
         >
@@ -92,6 +88,19 @@ const TypeWriter = ({ text, delay = 0 }) => {
 };
 
 const Inicio = ({ setActiveTab }) => {
+  // Lista de perfiles profesionales AMPLIADA
+  const perfiles = [
+    "Desarrollador Full Stack",
+    "Analista de Sistemas",
+    "Arquitecto Backend",
+    "Administrador de Bases de Datos",
+    "Desarrollador Web & Frontend",
+    "Diseño de Landing Pages",
+    "Soporte Técnico IT",
+    "Mantenimiento y Reparación de PC",
+    "Analista de Datos"
+  ];
+
   return (
     <div className="relative overflow-hidden w-full min-h-[80vh] flex flex-col items-center justify-center space-y-6 md:space-y-8 text-center py-8 md:py-16 px-4">
       
@@ -145,7 +154,7 @@ const Inicio = ({ setActiveTab }) => {
           className="animate-slide-up text-lg sm:text-xl lg:text-2xl text-blue-400 font-medium tracking-wide max-w-3xl min-h-[2rem]"
           style={{ animationDelay: '0.5s' }}
         >
-          <TypeWriter text="Full Stack Developer | Aplicaciones Completas y Bases de Datos" delay={800} />
+          <TypeWriter text="Soluciones Tecnológicas Integrales" delay={800} />
         </h2>
         
         {/* Párrafo de Descripción */}
@@ -153,14 +162,30 @@ const Inicio = ({ setActiveTab }) => {
           className="animate-slide-up max-w-2xl text-slate-300 text-base md:text-lg leading-relaxed px-2"
           style={{ animationDelay: '0.7s' }}
         >
-          Con 5 años de experiencia, no me limito a escribir código; transformo reglas de negocio complejas en sistemas resilientes, escalables y de alto rendimiento.
+          Ingeniero en Computación con 5 años de experiencia diseñando ecosistemas de software escalables. Traduzco necesidades empresariales complejas en soluciones tecnológicas integrales, especializándome en la automatización de procesos críticos y la optimización de bases de datos para garantizar el máximo rendimiento.
         </p>
+
+        {/* SECCIÓN: Perfiles Profesionales (Badges) */}
+        <div 
+          className="animate-slide-up flex flex-wrap justify-center gap-2 sm:gap-3 max-w-4xl px-2"
+          style={{ animationDelay: '0.8s' }}
+        >
+          {perfiles.map((perfil, index) => (
+            <span 
+              key={index}
+              className="flex items-center gap-1.5 px-3 py-1.5 md:px-4 md:py-2 bg-slate-800/60 border border-slate-700/50 hover:border-blue-500/40 text-slate-300 text-xs md:text-sm rounded-full backdrop-blur-md transition-colors cursor-default shadow-sm hover:shadow-blue-500/10"
+            >
+              <Terminal className="w-3 h-3 md:w-4 md:h-4 text-cyan-500 flex-shrink-0" />
+              <span className="whitespace-nowrap">{perfil}</span>
+            </span>
+          ))}
+        </div>
         
         {/* Botón de Acción */}
-        <div className="animate-slide-up" style={{ animationDelay: '0.9s' }}>
+        <div className="animate-slide-up pt-2" style={{ animationDelay: '0.9s' }}>
           <button 
             onClick={() => setActiveTab('portafolio')}
-            className="mt-2 px-6 md:px-8 py-3 md:py-4 bg-blue-600/80 hover:bg-blue-500 backdrop-blur-md text-white rounded-lg font-semibold transition-all duration-300 shadow-[0_0_20px_rgba(37,99,235,0.3)] flex items-center gap-2 border border-blue-500/50 text-sm md:text-base group"
+            className="px-6 md:px-8 py-3 md:py-4 bg-blue-600/80 hover:bg-blue-500 backdrop-blur-md text-white rounded-lg font-semibold transition-all duration-300 shadow-[0_0_20px_rgba(37,99,235,0.3)] flex items-center gap-2 border border-blue-500/50 text-sm md:text-base group"
           >
             Ver mis proyectos 
             <ChevronRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
