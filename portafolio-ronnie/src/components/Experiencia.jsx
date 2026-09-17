@@ -1,5 +1,5 @@
 import React from 'react';
-import { Briefcase, Calendar, Code2, Database, Layout, ShieldCheck, Mail } from 'lucide-react';
+import { Briefcase, Calendar, Code2, Database, Layout, ShieldCheck, Mail, Monitor } from 'lucide-react';
 
 const Experiencia = () => {
   const trabajos = [
@@ -14,7 +14,7 @@ const Experiencia = () => {
       bgBadge: "bg-orange-500/10 text-orange-300 border-orange-500/30",
       tecnologias: [".NET 10", ".NET 8", "ML.NET", "Gmail API", "EF Core", "JWT"],
       descripcion: [
-        "Diseño y desarrollo de una API RESTful para la sincronización y clasificación inteligente de correos electrónicos, utilizando .NET 8 y actualizando el ecosistema a .NET 10.",
+        "Diseñe y desarrolle de una API RESTful para la sincronización y clasificación inteligente de correos electrónicos, utilizando .NET 8 y actualizando el ecosistema a .NET 10.",
         "Integración segura con la API de Gmail a través de Google Cloud Console, implementando el flujo de autorización OAuth 2.0.",
         "Entrenamiento e implementación de modelos de Machine Learning (ML.NET FastTree) para categorizar de forma predictiva el contenido de los mensajes.",
         "Diseño de arquitectura de datos con Entity Framework Core y SQL Server, protegiendo tokens y datos sensibles con ASP.NET Data Protection y seguridad de endpoints con JWT.",
@@ -41,6 +41,23 @@ const Experiencia = () => {
     },
     {
       empresa: "Nic.ni (Sistema Nacional de Dominios)",
+      puesto: "Desarrollador Web Frontend (Rediseño Oficial)",
+      periodo: "2025 - 2026",
+      icono: <Monitor className="text-indigo-400 w-5 h-5 md:w-6 md:h-6" />,
+      borde: "border-indigo-500/50",
+      hoverBorder: "hover:border-indigo-500/50",
+      sombra: "hover:shadow-[0_8px_25px_rgba(99,102,241,0.15)]",
+      bgBadge: "bg-indigo-500/10 text-indigo-300 border-indigo-500/30",
+      tecnologias: ["UX/UI", "Frontend", "Diseño Responsivo", "Web Optimization"],
+      descripcion: [
+        "Rediseño integral del portal web oficial de Nic.ni, migrando de una arquitectura visual tradicional hacia una interfaz moderna, vanguardista y altamente tecnológica.",
+        "Desarrollo, estructuración y maquetación de las vistas principales del sistema: Inicio, Nosotros, motor de búsqueda Whois, catálogo de Dominios y portal de Contacto.",
+        "Mejora significativa en la Experiencia de Usuario (UX) y la Interfaz de Usuario (UI), aplicando principios de diseño responsivo para garantizar una navegación fluida en dispositivos móviles y de escritorio.",
+        "Optimización de la estructura frontend para agilizar los tiempos de carga y modernizar la imagen institucional del registro nacional de dominios."
+      ]
+    },
+    {
+      empresa: "Nic.ni (Sistema Nacional de Dominios)",
       puesto: "Analista del Sistema SISNIC",
       periodo: "Julio 2022 - Agosto 2026",
       icono: <Layout className="text-cyan-400 w-5 h-5 md:w-6 md:h-6" />,
@@ -48,7 +65,7 @@ const Experiencia = () => {
       hoverBorder: "hover:border-cyan-500/50",
       sombra: "hover:shadow-[0_8px_25px_rgba(6,182,212,0.15)]",
       bgBadge: "bg-cyan-500/10 text-cyan-300 border-cyan-500/30",
-      tecnologias: ["UX/UI", "Backend", "Automatización", "Reportes"],
+      tecnologias: ["Backend", "Automatización", "SQL", "Reportes"],
       descripcion: [
         "Optimización de rendimiento y refactorización de código en el núcleo del sistema SISNIC.",
         "Desarrollo de módulos de automatización, incluyendo el envío automático de correos para notificar bajas y vencimientos de dominios.",
