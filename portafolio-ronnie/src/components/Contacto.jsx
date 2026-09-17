@@ -1,7 +1,7 @@
 import React from 'react';
-import { Mail, Smartphone } from 'lucide-react';
+import { Mail, Smartphone, MessageSquare } from 'lucide-react';
 
-// Se modificaron los SVG para aceptar 'className' y ser responsivos con Tailwind
+// Se mantuvieron los SVG personalizados para asegurar 0 errores de importación
 const GithubLogo = ({ className }) => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
     <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/>
@@ -16,48 +16,95 @@ const LinkedinLogo = ({ className }) => (
 
 const Contacto = () => {
   return (
-    <div className="animate-fade-in max-w-4xl mx-auto py-8 md:py-12 px-4 sm:px-6 text-center">
+    <div className="relative animate-fade-in max-w-5xl mx-auto py-12 md:py-20 px-4 sm:px-6 text-center">
       
-      {/* Título Responsive */}
-      <h2 className="text-2xl sm:text-3xl font-bold mb-6 md:mb-8 text-white drop-shadow-md">
-        Iniciemos una conversación
-      </h2>
-      
-      {/* Párrafo Responsive */}
-      <p className="text-slate-300 mb-8 sm:mb-10 text-base sm:text-lg max-w-2xl mx-auto backdrop-blur-sm bg-slate-900/30 p-4 sm:p-5 rounded-xl border border-slate-800/50 leading-relaxed">
-        Abierto a conectar con profesionales de la industria, debatir sobre diseño de software y colaborar en retos tecnológicos que exijan soluciones robustas e innovadoras.
-      </p>
-      
-      {/* Botones de Contacto: 1 columna en celular, 2 en tablet/PC */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 max-w-2xl mx-auto">
-        <a 
-          href="https://www.linkedin.com/in/ronnie-acevedo-a33625262" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="flex items-center justify-center gap-2.5 sm:gap-3 px-4 sm:px-6 py-3.5 sm:py-4 bg-[#0A66C2]/90 hover:bg-[#004182] backdrop-blur-md text-white rounded-xl text-sm sm:text-base font-medium transition-colors border border-[#0A66C2]/50 shadow-lg"
-        >
-          <LinkedinLogo className="w-5 h-5 sm:w-6 sm:h-6" /> LinkedIn
-        </a>
-        <a 
-          href="https://github.com/ronniestark" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="flex items-center justify-center gap-2.5 sm:gap-3 px-4 sm:px-6 py-3.5 sm:py-4 bg-slate-800/80 hover:bg-slate-700 backdrop-blur-md text-white rounded-xl text-sm sm:text-base font-medium border border-slate-600 transition-colors shadow-lg"
-        >
-          <GithubLogo className="w-5 h-5 sm:w-6 sm:h-6" /> GitHub
-        </a>
-        <a 
-          href="mailto:ronniestark999@gmail.com" 
-          className="flex items-center justify-center gap-2.5 sm:gap-3 px-4 sm:px-6 py-3.5 sm:py-4 bg-blue-600/80 hover:bg-blue-500 backdrop-blur-md text-white rounded-xl text-sm sm:text-base font-medium border border-blue-500/50 transition-colors shadow-lg"
-        >
-          <Mail className="w-5 h-5 sm:w-6 sm:h-6" /> ronniestark999@gmail.com
-        </a>
-        <a 
-          href="tel:+50585098015" 
-          className="flex items-center justify-center gap-2.5 sm:gap-3 px-4 sm:px-6 py-3.5 sm:py-4 bg-emerald-600/80 hover:bg-emerald-500 backdrop-blur-md text-white rounded-xl text-sm sm:text-base font-medium border border-emerald-500/50 transition-colors shadow-lg"
-        >
-          <Smartphone className="w-5 h-5 sm:w-6 sm:h-6" /> +505 85098015
-        </a>
+      {/* Efecto de resplandor de fondo */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-lg h-64 bg-blue-600/10 blur-[120px] pointer-events-none rounded-full z-0"></div>
+
+      <div className="relative z-10">
+        {/* Título con ícono */}
+        <div className="flex flex-col items-center justify-center mb-8">
+          <div className="bg-blue-500/10 p-3 rounded-2xl mb-4 border border-blue-500/20 shadow-[0_0_15px_rgba(59,130,246,0.2)]">
+            <MessageSquare className="w-8 h-8 text-blue-400" />
+          </div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400 drop-shadow-sm pb-1">
+            Iniciemos una conversación
+          </h2>
+        </div>
+        
+        {/* Párrafo de introducción (Estilo Glassmorphism) */}
+        <p className="text-slate-300 mb-12 text-base sm:text-lg max-w-2xl mx-auto backdrop-blur-md bg-slate-900/60 p-6 sm:p-8 rounded-2xl border border-slate-700/50 shadow-xl leading-relaxed">
+          Abierto a conectar con profesionales de la industria, debatir sobre diseño de software y colaborar en retos tecnológicos que exijan soluciones robustas e innovadoras.
+        </p>
+        
+        {/* Cuadrícula de Tarjetas de Contacto */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 max-w-3xl mx-auto">
+          
+          {/* Tarjeta LinkedIn */}
+          <a 
+            href="https://www.linkedin.com/in/ronnie-acevedo-a33625262" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="group relative flex items-center gap-4 p-5 sm:p-6 bg-slate-900/50 backdrop-blur-sm rounded-2xl border border-slate-700/50 hover:border-[#0A66C2] hover:bg-slate-800/80 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(10,102,194,0.15)] overflow-hidden"
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-[#0A66C2]/0 via-[#0A66C2]/5 to-[#0A66C2]/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+            <div className="bg-[#0A66C2]/10 p-3 rounded-xl text-[#0A66C2] group-hover:scale-110 group-hover:bg-[#0A66C2] group-hover:text-white transition-all duration-300">
+              <LinkedinLogo className="w-6 h-6 sm:w-7 sm:h-7" />
+            </div>
+            <div className="text-left">
+              <span className="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-1">LinkedIn</span>
+              <span className="block text-slate-200 font-medium text-sm sm:text-base">Ronnie Acevedo</span>
+            </div>
+          </a>
+
+          {/* Tarjeta GitHub */}
+          <a 
+            href="https://github.com/ronniestark" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="group relative flex items-center gap-4 p-5 sm:p-6 bg-slate-900/50 backdrop-blur-sm rounded-2xl border border-slate-700/50 hover:border-slate-400 hover:bg-slate-800/80 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(148,163,184,0.15)] overflow-hidden"
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-slate-400/0 via-slate-400/5 to-slate-400/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+            <div className="bg-slate-700/30 p-3 rounded-xl text-slate-300 group-hover:scale-110 group-hover:bg-slate-200 group-hover:text-slate-900 transition-all duration-300">
+              <GithubLogo className="w-6 h-6 sm:w-7 sm:h-7" />
+            </div>
+            <div className="text-left">
+              <span className="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-1">GitHub</span>
+              <span className="block text-slate-200 font-medium text-sm sm:text-base">ronniestark</span>
+            </div>
+          </a>
+
+          {/* Tarjeta Email */}
+          <a 
+            href="mailto:ronniestark999@gmail.com" 
+            className="group relative flex items-center gap-4 p-5 sm:p-6 bg-slate-900/50 backdrop-blur-sm rounded-2xl border border-slate-700/50 hover:border-cyan-500 hover:bg-slate-800/80 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(6,182,212,0.15)] overflow-hidden"
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/0 via-cyan-500/5 to-cyan-500/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+            <div className="bg-cyan-500/10 p-3 rounded-xl text-cyan-400 group-hover:scale-110 group-hover:bg-cyan-500 group-hover:text-white transition-all duration-300">
+              <Mail className="w-6 h-6 sm:w-7 sm:h-7" />
+            </div>
+            <div className="text-left">
+              <span className="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-1">Email</span>
+              <span className="block text-slate-200 font-medium text-sm sm:text-base truncate max-w-[180px] sm:max-w-[200px]">ronniestark999@gmail.com</span>
+            </div>
+          </a>
+
+          {/* Tarjeta Teléfono */}
+          <a 
+            href="tel:+50585098015" 
+            className="group relative flex items-center gap-4 p-5 sm:p-6 bg-slate-900/50 backdrop-blur-sm rounded-2xl border border-slate-700/50 hover:border-emerald-500 hover:bg-slate-800/80 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(16,185,129,0.15)] overflow-hidden"
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/0 via-emerald-500/5 to-emerald-500/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+            <div className="bg-emerald-500/10 p-3 rounded-xl text-emerald-400 group-hover:scale-110 group-hover:bg-emerald-500 group-hover:text-white transition-all duration-300">
+              <Smartphone className="w-6 h-6 sm:w-7 sm:h-7" />
+            </div>
+            <div className="text-left">
+              <span className="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-1">Teléfono / WhatsApp</span>
+              <span className="block text-slate-200 font-medium text-sm sm:text-base">+505 85098015</span>
+            </div>
+          </a>
+
+        </div>
       </div>
     </div>
   );
