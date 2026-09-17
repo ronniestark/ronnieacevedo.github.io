@@ -14,8 +14,10 @@ const FloatingCode = () => {
       left: `${Math.random() * 100}%`,
       animationDuration: `${Math.random() * 10 + 15}s`,
       animationDelay: `${Math.random() * 15}s`,
-      fontSize: `${Math.random() * 1.5 + 0.8}rem`,
-      opacity: Math.random() * 0.15 + 0.05,
+      // 1. Aumentamos el tamaño base de la fuente para que se lean mejor
+      fontSize: `${Math.random() * 2 + 1.2}rem`, 
+      // 2. Aumentamos drásticamente la opacidad (ahora entre 0.3 y 0.7)
+      opacity: Math.random() * 0.4 + 0.3, 
     }));
     
     setParticles(newParticles);
@@ -25,13 +27,9 @@ const FloatingCode = () => {
     <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
       <style>{`
         @keyframes float-up {
-          /* Inician ligeramente abajo de la pantalla */
           0% { transform: translateY(10vh) rotate(0deg); opacity: 0; }
-          /* Aparecen rápidamente */
           10% { opacity: var(--max-opacity); }
-          /* Se mantienen visibles casi hasta llegar arriba */
           90% { opacity: var(--max-opacity); }
-          /* Desaparecen mucho más arriba del límite superior de la pantalla */
           100% { transform: translateY(-120vh) rotate(360deg); opacity: 0; }
         }
       `}</style>
@@ -39,7 +37,8 @@ const FloatingCode = () => {
       {particles.map((p) => (
         <div
           key={p.id}
-          className="absolute text-blue-500/30 font-mono select-none"
+          // 3. Cambiamos text-blue-500/30 a text-blue-400 y agregamos font-bold
+          className="absolute text-blue-400 font-mono font-bold select-none"
           style={{
             left: p.left,
             bottom: '-10%',
@@ -47,6 +46,8 @@ const FloatingCode = () => {
             '--max-opacity': p.opacity,
             animation: `float-up ${p.animationDuration} linear infinite`,
             animationDelay: p.animationDelay,
+            // 4. Añadimos un pequeño resplandor para que destaquen más
+            textShadow: '0 0 10px rgba(96, 165, 250, 0.5)'
           }}
         >
           {p.symbol}

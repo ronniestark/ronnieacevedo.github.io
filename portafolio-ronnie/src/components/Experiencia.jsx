@@ -1,8 +1,25 @@
 import React from 'react';
-import { Briefcase, Calendar, Code2, Database, Layout, ShieldCheck } from 'lucide-react';
+import { Briefcase, Calendar, Code2, Database, Layout, ShieldCheck, Mail } from 'lucide-react';
 
 const Experiencia = () => {
   const trabajos = [
+    {
+      empresa: "Desarrollo Independiente",
+      puesto: "Desarrollador Backend & Machine Learning",
+      periodo: "Agosto 2026 - Septiembre 2026",
+      icono: <Mail className="text-orange-400 w-5 h-5 md:w-6 md:h-6" />,
+      borde: "border-orange-500/50",
+      sombra: "hover:shadow-orange-500/20",
+      bgBadge: "bg-orange-500/20 text-orange-300 border-orange-500/30",
+      tecnologias: [".NET 10", , "ML.NET", "Gmail API", "EF Core", "JWT"],
+      descripcion: [
+        "Diseño y desarrollo de una API RESTful para la sincronización y clasificación inteligente de correos electrónicos, utilizando .NET 8 y actualizando el ecosistema a .NET 10.",
+        "Integración segura con la API de Gmail a través de Google Cloud Console, implementando el flujo de autorización OAuth 2.0.",
+        "Entrenamiento e implementación de modelos de Machine Learning (ML.NET FastTree) para categorizar de forma predictiva el contenido de los mensajes.",
+        "Diseño de arquitectura de datos con Entity Framework Core y SQL Server, protegiendo tokens y datos sensibles con ASP.NET Data Protection y seguridad de endpoints con JWT.",
+        "Implementación de flujos de Integración Continua (CI) mediante GitHub Actions para automatizar las compilaciones del proyecto."
+      ]
+    },
     {
       empresa: "Universidad Nacional de Ingeniería (DTI)",
       puesto: "Analista de Sistemas",

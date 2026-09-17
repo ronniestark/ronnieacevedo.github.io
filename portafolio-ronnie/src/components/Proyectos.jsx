@@ -11,6 +11,13 @@ const Proyectos = () => {
       visibility: "Public"
     },
     {
+      title: "EmailClassifierAPI",
+      desc: "Api para detectar y clasificar correos",
+      tech: "C#",
+      color: "bg-purple-500",
+      visibility: "Public"
+    },
+    {
       title: "ProyectoRanchel",
       desc: "Sistema de escritorio para un minisuper. Gestiona entrada y salida de productos, punto de venta y administración general.",
       tech: "C#",
