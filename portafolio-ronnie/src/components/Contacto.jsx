@@ -18,16 +18,50 @@ const Contacto = () => {
   return (
     <div className="relative animate-fade-in max-w-5xl mx-auto py-12 md:py-20 px-4 sm:px-6 text-center">
       
-      {/* Efecto de resplandor de fondo */}
+      {/* CSS inyectado para las animaciones del icono y el texto neón */}
+      <style>{`
+        @keyframes float-slow {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-10px); }
+        }
+        .animate-float-slow {
+          animation: float-slow 3.5s ease-in-out infinite;
+        }
+        
+        @keyframes neon-pulse {
+          0%, 100% {
+            text-shadow: 
+              0 0 7px rgba(56,189,248,0.8),
+              0 0 15px rgba(56,189,248,0.6),
+              0 0 30px rgba(56,189,248,0.4);
+            color: #ffffff;
+          }
+          50% {
+            text-shadow: 
+              0 0 4px rgba(56,189,248,0.4),
+              0 0 10px rgba(56,189,248,0.3),
+              0 0 20px rgba(56,189,248,0.2);
+            color: #e0f2fe; /* Un cyan súper claro al apagar levemente */
+          }
+        }
+        .neon-text {
+          animation: neon-pulse 2.5s ease-in-out infinite;
+        }
+      `}</style>
+
+      {/* Efecto de resplandor de fondo general */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-lg h-64 bg-blue-600/10 blur-[120px] pointer-events-none rounded-full z-0"></div>
 
       <div className="relative z-10">
-        {/* Título con ícono */}
-        <div className="flex flex-col items-center justify-center mb-8">
-          <div className="bg-blue-500/10 p-3 rounded-2xl mb-4 border border-blue-500/20 shadow-[0_0_15px_rgba(59,130,246,0.2)]">
+        {/* Título con ícono animado */}
+        <div className="flex flex-col items-center justify-center mb-8 mt-4">
+          {/* El contenedor del icono ahora tiene la clase animate-float-slow */}
+          <div className="animate-float-slow bg-blue-500/10 p-3.5 rounded-2xl mb-5 border border-blue-400/30 shadow-[0_0_25px_rgba(59,130,246,0.3)]">
             <MessageSquare className="w-8 h-8 text-blue-400" />
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400 drop-shadow-sm pb-1">
+          
+          {/* El texto ahora usa la clase neon-text en lugar de bg-clip-text */}
+          <h2 className="neon-text text-3xl sm:text-4xl md:text-5xl font-extrabold pb-3 tracking-wide">
             Iniciemos una conversación
           </h2>
         </div>

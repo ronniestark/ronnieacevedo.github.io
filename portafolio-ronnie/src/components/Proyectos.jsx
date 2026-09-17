@@ -55,56 +55,105 @@ const Proyectos = () => {
   ];
 
   return (
-    <div className="animate-fade-in max-w-6xl mx-auto py-8 px-4 sm:px-6">
+    <div className="relative animate-fade-in max-w-6xl mx-auto py-12 md:py-20 px-4 sm:px-6">
       
-      {/* Título Responsive */}
-      <h2 className="text-2xl sm:text-3xl font-bold mb-6 md:mb-8 text-white flex items-center gap-2 sm:gap-3 drop-shadow-md">
-        <FolderGit2 className="text-blue-400 w-6 h-6 sm:w-8 sm:h-8" /> Proyectos Destacados
-      </h2>
-      
-      {/* Cuadrícula adaptativa: 1 col celular, 2 col tablet, 3 col PC */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
-        {repos.map((repo, idx) => (
-          <div key={idx} className="bg-[#0d1117]/80 backdrop-blur-md rounded-2xl p-5 sm:p-6 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 shadow-lg hover:shadow-blue-500/10 flex flex-col justify-between h-full group">
-            <div>
-              {/* Flex-col en celulares para evitar choque de textos, flex-row en tablets/PC */}
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-2 mb-4">
-                
-                {/* Enlace dinámico con truncado en móviles si es muy largo */}
-                <a 
-                  href={repo.visibility === 'Public' ? `https://github.com/ronniestark/${repo.title}` : '#'} 
-                  target={repo.visibility === 'Public' ? "_blank" : "_self"} 
-                  rel="noopener noreferrer" 
-                  className={`font-semibold text-base sm:text-lg flex items-center gap-2 transition-colors ${repo.visibility === 'Public' ? 'text-blue-400 hover:underline' : 'text-slate-300 cursor-default'}`}
-                  title={repo.visibility === 'Private' ? "Repositorio Privado" : "Ver en GitHub"}
-                >
-                  {repo.visibility === 'Public' ? <GitBranch className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" /> : <Lock className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 text-slate-500"/>}
-                  <span className="truncate max-w-[220px] sm:max-w-none">{repo.title}</span>
-                </a>
+      {/* Estilos inyectados para las animaciones */}
+      <style>{`
+        @keyframes float-slow {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-10px); }
+        }
+        .animate-float-slow {
+          animation: float-slow 3.5s ease-in-out infinite;
+        }
+        
+        @keyframes neon-pulse {
+          0%, 100% {
+            text-shadow: 
+              0 0 7px rgba(56,189,248,0.8),
+              0 0 15px rgba(56,189,248,0.6),
+              0 0 30px rgba(56,189,248,0.4);
+            color: #ffffff;
+          }
+          50% {
+            text-shadow: 
+              0 0 4px rgba(56,189,248,0.4),
+              0 0 10px rgba(56,189,248,0.3),
+              0 0 20px rgba(56,189,248,0.2);
+            color: #e0f2fe;
+          }
+        }
+        .neon-text {
+          animation: neon-pulse 2.5s ease-in-out infinite;
+        }
+      `}</style>
 
-                {/* Etiquetas (Badges) escalables */}
-                <span className={`text-[10px] sm:text-xs px-2.5 sm:px-3 py-1 rounded-full border font-medium tracking-wide w-fit ${
-                  repo.visibility === 'Public' 
-                    ? 'border-slate-600 text-slate-300 bg-slate-800/50' 
-                    : 'border-red-900/50 text-red-400 bg-red-950/30'
-                }`}>
-                  {repo.visibility === 'Public' ? 'Público' : 'Privado'}
-                </span>
+      {/* Resplandor de fondo central para el contenedor */}
+      <div className="absolute top-[10%] left-1/2 -translate-x-1/2 w-full max-w-3xl h-64 bg-blue-600/10 blur-[120px] pointer-events-none rounded-full z-0"></div>
+
+      <div className="relative z-10">
+        
+        {/* Título y Logo Animado */}
+        <div className="flex flex-col items-center justify-center mb-12 mt-4 text-center">
+          <div className="animate-float-slow bg-blue-500/10 p-3.5 rounded-2xl mb-5 border border-blue-400/30 shadow-[0_0_25px_rgba(59,130,246,0.3)]">
+            <FolderGit2 className="w-8 h-8 text-blue-400" />
+          </div>
+          <h2 className="neon-text text-3xl sm:text-4xl md:text-5xl font-extrabold pb-3 tracking-wide">
+            Proyectos Destacados
+          </h2>
+        </div>
+        
+        {/* Cuadrícula adaptativa de Proyectos */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+          {repos.map((repo, idx) => (
+            <div 
+              key={idx} 
+              className="group relative bg-slate-900/50 backdrop-blur-md rounded-2xl p-6 border border-slate-700/50 hover:border-blue-500/50 hover:bg-slate-800/80 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_25px_rgba(59,130,246,0.15)] overflow-hidden flex flex-col justify-between h-full"
+            >
+              {/* Efecto de barrido de luz (Sweep) en hover */}
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 via-blue-500/5 to-blue-500/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 pointer-events-none"></div>
+              
+              <div className="relative z-10">
+                <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3 sm:gap-2 mb-5">
+                  
+                  {/* Título como Enlace */}
+                  <a 
+                    href={repo.visibility === 'Public' ? `https://github.com/ronniestark/${repo.title}` : '#'} 
+                    target={repo.visibility === 'Public' ? "_blank" : "_self"} 
+                    rel="noopener noreferrer" 
+                    className={`font-bold text-lg flex items-start gap-2.5 transition-all ${repo.visibility === 'Public' ? 'text-slate-100 hover:text-blue-400' : 'text-slate-300 cursor-default'}`}
+                    title={repo.visibility === 'Private' ? "Repositorio Privado" : "Ver en GitHub"}
+                  >
+                    <div className={`p-1.5 rounded-lg mt-0.5 transition-colors ${repo.visibility === 'Public' ? 'bg-blue-500/10 text-blue-400 group-hover:bg-blue-500/20' : 'bg-slate-800 text-slate-500'}`}>
+                      {repo.visibility === 'Public' ? <GitBranch className="w-4 h-4 sm:w-5 sm:h-5" /> : <Lock className="w-4 h-4 sm:w-5 sm:h-5"/>}
+                    </div>
+                    <span className="truncate max-w-[200px] sm:max-w-none leading-tight pt-1 group-hover:translate-x-0.5 transition-transform">{repo.title}</span>
+                  </a>
+
+                  {/* Badge Público/Privado */}
+                  <span className={`text-[10px] sm:text-xs px-2.5 py-1 rounded-full border font-semibold tracking-wide w-fit flex-shrink-0 mt-1 sm:mt-0 ${
+                    repo.visibility === 'Public' 
+                      ? 'border-blue-500/30 text-blue-300 bg-blue-500/10' 
+                      : 'border-red-900/50 text-red-400 bg-red-950/30'
+                  }`}>
+                    {repo.visibility === 'Public' ? 'Público' : 'Privado'}
+                  </span>
+                </div>
+                
+                {/* Descripción */}
+                <p className="text-slate-400 text-sm mb-6 leading-relaxed">
+                  {repo.desc}
+                </p>
               </div>
               
-              {/* Descripción */}
-              <p className="text-slate-400 text-sm mb-6 leading-relaxed">
-                {repo.desc}
-              </p>
+              {/* Etiqueta de Tecnología Inferior */}
+              <div className="relative z-10 flex items-center gap-2.5 text-[11px] sm:text-xs text-slate-300 font-semibold bg-slate-950/50 w-fit px-3 py-1.5 rounded-lg border border-slate-700/60 group-hover:border-slate-500 transition-colors">
+                <span className={`w-2.5 h-2.5 rounded-full shadow-sm ${repo.color} group-hover:animate-pulse`}></span>
+                {repo.tech}
+              </div>
             </div>
-            
-            {/* Etiqueta de Tecnología */}
-            <div className="flex items-center gap-2 text-[11px] sm:text-xs text-slate-300 font-medium bg-slate-900/50 w-fit px-3 py-1.5 rounded-lg border border-slate-800">
-              <span className={`w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full shadow-sm ${repo.color}`}></span>
-              {repo.tech}
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
