@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { ChevronRight, Terminal } from 'lucide-react';
+import { useLanguage } from '../i18n/LanguageContext';
 
 // Componente para el efecto de fondo de código flotante
 const FloatingCode = () => {
@@ -89,17 +90,8 @@ const TypeWriter = ({ text, delay = 0 }) => {
 
 const Inicio = ({ setActiveTab }) => {
   // Lista de perfiles profesionales AMPLIADA
-  const perfiles = [
-    "Desarrollador Full Stack",
-    "Analista de Sistemas",
-    "Arquitecto Backend",
-    "Administrador de Bases de Datos",
-    "Desarrollador Web & Frontend",
-    "Diseño de Landing Pages",
-    "Soporte Técnico IT",
-    "Mantenimiento y Reparación de PC",
-    "Analista de Datos"
-  ];
+const { t } = useLanguage();
+const perfiles = t.inicio.perfiles;
 
   return (
     <div className="relative overflow-hidden w-full min-h-[80vh] flex flex-col items-center justify-center space-y-6 md:space-y-8 text-center py-8 md:py-16 px-4">

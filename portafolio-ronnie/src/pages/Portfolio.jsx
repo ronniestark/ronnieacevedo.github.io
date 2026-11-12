@@ -9,17 +9,19 @@ import Proyectos from '../components/Proyectos';
 import Contacto from '../components/Contacto';
 import Footer from '../components/Footer';
 import Experiencia from '../components/Experiencia';
+import LanguageToggle from '../components/LanguageToggle';
+import { useLanguage } from '../i18n/LanguageContext';
 
 const Portfolio = () => {
   const [activeTab, setActiveTab] = useState('inicio');
-
+  const { t } = useLanguage();
   const navItems = [
-    { id: 'inicio', label: 'Inicio', icon: Home },
-    { id: 'ideologia', label: 'Mi Filosofía', icon: Lightbulb },
-    { id: 'experiencia', label: 'Experiencia', icon: Briefcase },
-    { id: 'habilidades', label: 'Habilidades', icon: Code2 },
-    { id: 'portafolio', label: 'Portafolio', icon: Layout },
-    { id: 'contacto', label: 'Contacto', icon: Phone }
+    { id: 'inicio', label: t.nav.inicio, icon: Home },
+  { id: 'ideologia', label: t.nav.ideologia, icon: Lightbulb },
+  { id: 'experiencia', label: t.nav.experiencia, icon: Briefcase },
+  { id: 'habilidades', label: t.nav.habilidades, icon: Code2 },
+  { id: 'portafolio', label: t.nav.portafolio, icon: Layout },
+  { id: 'contacto', label: t.nav.contacto, icon: Phone }
   ];
 
   const renderContent = () => {
@@ -57,34 +59,32 @@ const Portfolio = () => {
         
         {/* Navegación Responsive */}
         <nav className="sticky top-0 z-50 backdrop-blur-xl bg-slate-950/80 border-b border-slate-800/80 shadow-sm">
-          <div className="max-w-6xl mx-auto px-2 sm:px-4">
-            {/* 
-              Cambios clave para móviles:
-              - lg:justify-center: Centra en PC, inicia desde la izquierda en móvil.
-              - snap-x snap-mandatory: Añade una sensación magnética suave al hacer scroll táctil.
-            */}
-            <div className="flex justify-start lg:justify-center space-x-1.5 sm:space-x-2 overflow-x-auto py-3 md:py-4 scrollbar-hide snap-x snap-mandatory">
-              {navItems.map((item) => {
-                const Icon = item.icon;
-                return (
-                  <button
-                    key={item.id}
-                    onClick={() => setActiveTab(item.id)}
-                    className={`snap-center flex-shrink-0 flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 rounded-full text-[0.8rem] sm:text-sm font-medium transition-all duration-300 whitespace-nowrap ${
-                      activeTab === item.id
-                        ? 'bg-blue-600/20 text-blue-400 shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] border border-blue-500/30'
-                        : 'text-slate-400 hover:text-white hover:bg-slate-800/50'
-                    }`}
-                  >
-                    {/* El ícono se adapta ligeramente al tamaño de pantalla */}
-                    <Icon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                    {item.label}
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-        </nav>
+  <div className="max-w-6xl mx-auto px-2 sm:px-4">
+    <div className="flex justify-start lg:justify-center items-center space-x-1.5 sm:space-x-2 overflow-x-auto py-3 md:py-4 scrollbar-hide snap-x snap-mandatory">
+      {navItems.map((item) => {
+        const Icon = item.icon;
+        return (
+          <button
+            key={item.id}
+            onClick={() => setActiveTab(item.id)}
+            className={`snap-center flex-shrink-0 flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 rounded-full text-[0.8rem] sm:text-sm font-medium transition-all duration-300 whitespace-nowrap ${
+              activeTab === item.id
+                ? 'bg-blue-600/20 text-blue-400 shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] border border-blue-500/30'
+                : 'text-slate-400 hover:text-white hover:bg-slate-800/50'
+            }`}
+          >
+            <Icon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+            {item.label}
+          </button>
+        );
+      })}
+
+      {/* Separador + botón de idioma, a la par de Contacto */}
+      <span className="flex-shrink-0 w-px h-5 bg-slate-700/70 mx-1"></span>
+      <LanguageToggle />
+    </div>
+  </div>
+</nav>
 
         {/* Contenido Dinámico Responsive (Padding ajustado para móviles) */}
         <main className="max-w-6xl mx-auto px-4 sm:px-6 py-8 md:py-12 flex-grow w-full">
