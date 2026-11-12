@@ -27,6 +27,13 @@ export const translations = {
       boton: 'Ver mis proyectos',
     },
 
+        contacto: {
+      titulo: 'Iniciemos una conversación',
+      intro:
+        'Abierto a conectar con profesionales de la industria, debatir sobre diseño de software y colaborar en retos tecnológicos que exijan soluciones robustas e innovadoras.',
+      telefono: 'Teléfono / WhatsApp',
+    },
+
         experiencia: {
       titulo: 'Trayectoria Profesional',
       trabajos: [
@@ -108,6 +115,7 @@ export const translations = {
         },
       ],
     },
+    
   },
   en: {
     nav: {
@@ -135,6 +143,13 @@ export const translations = {
         'Data Analyst',
       ],
       boton: 'View my projects',
+    },
+
+        contacto: {
+      titulo: "Let's start a conversation",
+      intro:
+        'Open to connecting with industry professionals, discussing software design and collaborating on technology challenges that demand robust and innovative solutions.',
+      telefono: 'Phone / WhatsApp',
     },
 
         experiencia: {

@@ -1,5 +1,8 @@
 import React from 'react';
 import { Mail, Smartphone, MessageSquare } from 'lucide-react';
+import { useLanguage } from '../i18n/LanguageContext';
+
+
 
 // Se mantuvieron los SVG personalizados para asegurar 0 errores de importación
 const GithubLogo = ({ className }) => (
@@ -15,6 +18,8 @@ const LinkedinLogo = ({ className }) => (
 );
 
 const Contacto = () => {
+  const { t } = useLanguage();
+
   return (
     <div className="relative animate-fade-in max-w-5xl mx-auto py-12 md:py-20 px-4 sm:px-6 text-center">
       
@@ -62,13 +67,13 @@ const Contacto = () => {
           
           {/* El texto ahora usa la clase neon-text en lugar de bg-clip-text */}
           <h2 className="neon-text text-3xl sm:text-4xl md:text-5xl font-extrabold pb-3 tracking-wide">
-            Iniciemos una conversación
+            {t.contacto.titulo}
           </h2>
         </div>
         
         {/* Párrafo de introducción (Estilo Glassmorphism) */}
         <p className="text-slate-300 mb-12 text-base sm:text-lg max-w-2xl mx-auto backdrop-blur-md bg-slate-900/60 p-6 sm:p-8 rounded-2xl border border-slate-700/50 shadow-xl leading-relaxed">
-          Abierto a conectar con profesionales de la industria, debatir sobre diseño de software y colaborar en retos tecnológicos que exijan soluciones robustas e innovadoras.
+         {t.contacto.intro}
         </p>
         
         {/* Cuadrícula de Tarjetas de Contacto */}
@@ -133,7 +138,7 @@ const Contacto = () => {
               <Smartphone className="w-6 h-6 sm:w-7 sm:h-7" />
             </div>
             <div className="text-left">
-              <span className="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-1">Teléfono / WhatsApp</span>
+              <span className="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-1">{t.contacto.telefono}</span>
               <span className="block text-slate-200 font-medium text-sm sm:text-base">+505 85098015</span>
             </div>
           </a>
