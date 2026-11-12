@@ -1,115 +1,62 @@
 import React from 'react';
 import { Briefcase, Calendar, Code2, Database, Layout, ShieldCheck, Mail, Monitor } from 'lucide-react';
+import { useLanguage } from '../i18n/LanguageContext';
 
 const Experiencia = () => {
-  const trabajos = [
+
+  const { t } = useLanguage();
+
+  const estilos = [
     {
-      empresa: "Desarrollo Independiente",
-      puesto: "Desarrollador Backend & Machine Learning",
-      periodo: "Agosto 2026 - Septiembre 2026",
       icono: <Mail className="text-orange-400 w-5 h-5 md:w-6 md:h-6" />,
       borde: "border-orange-500/50",
       hoverBorder: "hover:border-orange-500/50",
       sombra: "hover:shadow-[0_8px_25px_rgba(249,115,22,0.15)]",
       bgBadge: "bg-orange-500/10 text-orange-300 border-orange-500/30",
-      tecnologias: [".NET 10", ".NET 8", "ML.NET", "Gmail API", "EF Core", "JWT"],
-      descripcion: [
-        "Diseñe y desarrolle de una API RESTful para la sincronización y clasificación inteligente de correos electrónicos, utilizando .NET 8 y actualizando el ecosistema a .NET 10.",
-        "Integración segura con la API de Gmail a través de Google Cloud Console, implementando el flujo de autorización OAuth 2.0.",
-        "Entrenamiento e implementación de modelos de Machine Learning (ML.NET FastTree) para categorizar de forma predictiva el contenido de los mensajes.",
-        "Diseño de arquitectura de datos con Entity Framework Core y SQL Server, protegiendo tokens y datos sensibles con ASP.NET Data Protection y seguridad de endpoints con JWT.",
-        "Implementación de flujos de Integración Continua (CI) mediante GitHub Actions para automatizar las compilaciones del proyecto."
-      ]
     },
     {
-      empresa: "Universidad Nacional de Ingeniería (DTI)",
-      puesto: "Analista de Sistemas",
-      periodo: "Julio 2023 - Actualidad",
       icono: <Database className="text-blue-400 w-5 h-5 md:w-6 md:h-6" />,
       borde: "border-blue-500/50",
       hoverBorder: "hover:border-blue-500/50",
       sombra: "hover:shadow-[0_8px_25px_rgba(59,130,246,0.15)]",
       bgBadge: "bg-blue-500/10 text-blue-300 border-blue-500/30",
-      tecnologias: ["C#", "React", "SQL Server", "FastReport", "iText 7"],
-      descripcion: [
-        "Desarrollo Full Stack y reportería para el Sistema Institucional HelpDesk utilizando C#, React y FastReport, consumiendo datos directamente de SQL Server.",
-        "Implementación del módulo de Notas de Entrada y Salida para el Sistema de Bodega (SISBOD) utilizando iText 7, React y C#.",
-        "Encargado del Sistema de Activos Fijos (SAF), liderando el mantenimiento de código, optimización de base de datos y migración de nomenclatura institucional.",
-        "Diseño de reportes financieros y administrativos con FastReport para el sistema SIGFA.",
-        "Soporte técnico avanzado y mantenimiento de múltiples sistemas institucionales: SIPSI (Planificación), SIFA (Financiero), SIPAD (Procesos), SISCOM (Compras) y Tesorería."
-      ]
     },
     {
-      empresa: "Nic.ni (Sistema Nacional de Dominios)",
-      puesto: "Desarrollador Web Frontend (Rediseño Oficial)",
-      periodo: "2025 - 2026",
       icono: <Monitor className="text-indigo-400 w-5 h-5 md:w-6 md:h-6" />,
       borde: "border-indigo-500/50",
       hoverBorder: "hover:border-indigo-500/50",
       sombra: "hover:shadow-[0_8px_25px_rgba(99,102,241,0.15)]",
       bgBadge: "bg-indigo-500/10 text-indigo-300 border-indigo-500/30",
-      tecnologias: ["UX/UI", "Frontend", "Diseño Responsivo", "Web Optimization"],
-      descripcion: [
-        "Rediseño integral del portal web oficial de Nic.ni, migrando de una arquitectura visual tradicional hacia una interfaz moderna, vanguardista y altamente tecnológica.",
-        "Desarrollo, estructuración y maquetación de las vistas principales del sistema: Inicio, Nosotros, motor de búsqueda Whois, catálogo de Dominios y portal de Contacto.",
-        "Mejora significativa en la Experiencia de Usuario (UX) y la Interfaz de Usuario (UI), aplicando principios de diseño responsivo para garantizar una navegación fluida en dispositivos móviles y de escritorio.",
-        "Optimización de la estructura frontend para agilizar los tiempos de carga y modernizar la imagen institucional del registro nacional de dominios."
-      ]
     },
     {
-      empresa: "Nic.ni (Sistema Nacional de Dominios)",
-      puesto: "Analista del Sistema SISNIC",
-      periodo: "Julio 2022 - Agosto 2026",
       icono: <Layout className="text-cyan-400 w-5 h-5 md:w-6 md:h-6" />,
       borde: "border-cyan-500/50",
       hoverBorder: "hover:border-cyan-500/50",
       sombra: "hover:shadow-[0_8px_25px_rgba(6,182,212,0.15)]",
       bgBadge: "bg-cyan-500/10 text-cyan-300 border-cyan-500/30",
-      tecnologias: ["Backend", "Automatización", "SQL", "Reportes"],
-      descripcion: [
-        "Optimización de rendimiento y refactorización de código en el núcleo del sistema SISNIC.",
-        "Desarrollo de módulos de automatización, incluyendo el envío automático de correos para notificar bajas y vencimientos de dominios.",
-        "Implementación del sistema de asignación de corresponsales para clientes nacionales y desarrollo del reporte de Nota de Cobro.",
-        "Rediseño enfocado en la Experiencia de Usuario (UX) tanto en la interfaz del sistema SISNIC como en la página web oficial de Nic.ni, creando nuevos componentes interactivos.",
-        "Desarrollo total módulo de cuentas por cobrar, reporte y diseño de tablas.",
-        "Desarrollo total módulo de Administración de segmentos, así como tareas automatizadas de vencimientos de fechas expiration y procesos de bajas.",
-        "Desarrollo total módulo de solicitudes de renovación de dominios desde la Web Console.",
-        "Desarrollo y diseño de correos automatizados para notificaciones de vencimientos, bajas y renovaciones de dominios por SMTP.",
-        "Soporte técnico y resolución de problemas en el sistema SISNIC."
-      ]
     },
     {
-      empresa: "Seguros Prisma",
-      puesto: "Desarrollador de Software y Web Admin",
-      periodo: "Freelance",
       icono: <ShieldCheck className="text-purple-400 w-5 h-5 md:w-6 md:h-6" />,
       borde: "border-purple-500/50",
       hoverBorder: "hover:border-purple-500/50",
       sombra: "hover:shadow-[0_8px_25px_rgba(168,85,247,0.15)]",
       bgBadge: "bg-purple-500/10 text-purple-300 border-purple-500/30",
-      tecnologias: ["C#", "WPF", "Desktop Apps", "Web Admin"],
-      descripcion: [
-        "Diseño y desarrollo de una aplicación de escritorio (Desktop App) utilizando C# y WPF para la automatización de alertas de vencimientos de seguros obligatorios.",
-        "Administración técnica, soporte y mantenimiento de la plataforma web de la compañía."
-      ]
     },
     {
-      empresa: "Instituto de Protección y Sanidad Agropecuaria (IPSA)",
-      puesto: "Desarrollador Web",
-      periodo: "Enero 2022 - Junio 2022",
       icono: <Code2 className="text-emerald-400 w-5 h-5 md:w-6 md:h-6" />,
       borde: "border-emerald-500/50",
       hoverBorder: "hover:border-emerald-500/50",
       sombra: "hover:shadow-[0_8px_25px_rgba(16,185,129,0.15)]",
       bgBadge: "bg-emerald-500/10 text-emerald-300 border-emerald-500/30",
-      tecnologias: ["PHP", "Laravel", "Microsoft Forms", "Soporte"],
-      descripcion: [
-        "Desarrollo y mantenimiento de aplicaciones web utilizando el framework Laravel con PHP.",
-        "Implementación y gestión de sistemas de encuestas y recolección de datos integrando herramientas de Microsoft.",
-        "Soporte técnico general a usuarios y sistemas internos de la institución."
-      ]
-    }
+    },
   ];
+
+  const trabajos = t.experiencia.trabajos.map((trabajo, i) => ({
+    ...trabajo,
+    ...estilos[i],
+  }));
+
+ 
 
   return (
     <div className="relative animate-fade-in max-w-5xl mx-auto py-12 md:py-20 px-4 sm:px-6">
@@ -156,7 +103,7 @@ const Experiencia = () => {
             <Briefcase className="w-8 h-8 text-blue-400" />
           </div>
           <h2 className="neon-text text-3xl sm:text-4xl md:text-5xl font-extrabold pb-3 tracking-wide">
-            Trayectoria Profesional
+            {t.experiencia.titulo}
           </h2>
         </div>
         
