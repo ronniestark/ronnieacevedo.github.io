@@ -27,6 +27,35 @@ export const translations = {
       boton: 'Ver mis proyectos',
     },
 
+        filosofia: {
+      titulo: 'Filosofía de Desarrollo',
+      modelado: {
+        titulo: 'Modelado Estratégico y Datos',
+        texto:
+          'La solución nace en el diseño, no en el teclado. Antes de abrir el IDE, utilizo herramientas como **draw.io** para maquetar la arquitectura y diseñar el modelo relacional de la base de datos, garantizando bases sólidas y escalables.',
+      },
+      ddd: {
+        titulo: 'Domain-Driven Design (DDD)',
+        texto:
+          'Aislamiento estricto del núcleo de negocio. Diseño centrado en el dominio y uso intensivo de __Value Objects__ para erradicar la obsesión por primitivos y garantizar la integridad absoluta de los datos.',
+      },
+      arquitectura: {
+        titulo: 'Arquitectura Limpia y Evolutiva',
+        texto:
+          'Implementación de arquitecturas modernas como **Clean Architecture, Vertical Slices y CQRS**. El objetivo es construir sistemas con alta cohesión y bajo acoplamiento, altamente mantenibles y preparados para el cambio.',
+      },
+      seguridad: {
+        titulo: 'Seguridad, Rendimiento y Testing',
+        texto:
+          'El software debe ser robusto bajo estrés. Escribo **pruebas unitarias** exhaustivas, audito la seguridad del código, y realizo simulaciones de rendimiento y **concurrencia** para evitar cuellos de botella en producción.',
+      },
+      ux: {
+        titulo: 'Experiencia de Usuario (UI/UX) y Multiplataforma',
+        texto:
+          'Como Full Stack, comprendo que el backend más potente no sirve si la interfaz es confusa. Me enfoco en el diseño e implementación de **páginas web modernas y aplicaciones de escritorio (Desktop Apps)** intuitivas, estéticas y altamente responsivas, poniendo siempre la usabilidad en primer lugar.',
+      },
+    },
+
         contacto: {
       titulo: 'Iniciemos una conversación',
       intro:
@@ -145,6 +174,35 @@ export const translations = {
       boton: 'View my projects',
     },
 
+        filosofia: {
+      titulo: 'Development Philosophy',
+      modelado: {
+        titulo: 'Strategic Modeling & Data',
+        texto:
+          'The solution is born in design, not at the keyboard. Before opening the IDE, I use tools like **draw.io** to sketch the architecture and design the relational database model, ensuring solid and scalable foundations.',
+      },
+      ddd: {
+        titulo: 'Domain-Driven Design (DDD)',
+        texto:
+          'Strict isolation of the business core. Domain-centered design and intensive use of __Value Objects__ to eradicate primitive obsession and guarantee absolute data integrity.',
+      },
+      arquitectura: {
+        titulo: 'Clean & Evolutionary Architecture',
+        texto:
+          'Implementation of modern architectures such as **Clean Architecture, Vertical Slices and CQRS**. The goal is to build systems with high cohesion and low coupling, highly maintainable and ready for change.',
+      },
+      seguridad: {
+        titulo: 'Security, Performance & Testing',
+        texto:
+          'Software must be robust under stress. I write thorough **unit tests**, audit code security, and run performance and **concurrency** simulations to avoid bottlenecks in production.',
+      },
+      ux: {
+        titulo: 'User Experience (UI/UX) & Cross-Platform',
+        texto:
+          'As a Full Stack developer, I understand that the most powerful backend is useless if the interface is confusing. I focus on designing and building intuitive, aesthetic and highly responsive **modern web pages and desktop applications (Desktop Apps)**, always putting usability first.',
+      },
+    },
+    
         contacto: {
       titulo: "Let's start a conversation",
       intro:
