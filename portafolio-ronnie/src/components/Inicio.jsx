@@ -138,7 +138,7 @@ const perfiles = t.inicio.perfiles;
           className="animate-slide-up text-4xl sm:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400 tracking-tight drop-shadow-sm pb-2 px-1"
           style={{ animationDelay: '0.3s' }}
         >
-          Ing. Ronnie Acevedo
+          {t.inicio.titulo}
         </h1>
         
         {/* Subtítulo con efecto de máquina de escribir */}
@@ -146,7 +146,7 @@ const perfiles = t.inicio.perfiles;
           className="animate-slide-up text-lg sm:text-xl lg:text-2xl text-blue-400 font-medium tracking-wide max-w-3xl min-h-[2rem]"
           style={{ animationDelay: '0.5s' }}
         >
-          <TypeWriter text="Soluciones Tecnológicas Integrales" delay={800} />
+          <TypeWriter key={t.inicio.subtitulo} text={t.inicio.subtitulo} delay={800} />
         </h2>
         
         {/* Párrafo de Descripción */}
@@ -154,7 +154,7 @@ const perfiles = t.inicio.perfiles;
           className="animate-slide-up max-w-2xl text-slate-300 text-base md:text-lg leading-relaxed px-2"
           style={{ animationDelay: '0.7s' }}
         >
-          Ingeniero en Computación con 5 años de experiencia diseñando ecosistemas de software escalables. Traduzco necesidades empresariales complejas en soluciones tecnológicas integrales, especializándome en la automatización de procesos críticos y la optimización de bases de datos para garantizar el máximo rendimiento.
+          {t.inicio.descripcion}
         </p>
 
         {/* SECCIÓN: Perfiles Profesionales (Badges) */}
@@ -179,7 +179,7 @@ const perfiles = t.inicio.perfiles;
             onClick={() => setActiveTab('portafolio')}
             className="px-6 md:px-8 py-3 md:py-4 bg-blue-600/80 hover:bg-blue-500 backdrop-blur-md text-white rounded-lg font-semibold transition-all duration-300 shadow-[0_0_20px_rgba(37,99,235,0.3)] flex items-center gap-2 border border-blue-500/50 text-sm md:text-base group"
           >
-            Ver mis proyectos 
+            {t.inicio.boton}
             <ChevronRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
           </button>
         </div>

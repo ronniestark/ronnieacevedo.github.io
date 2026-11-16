@@ -27,6 +27,58 @@ export const translations = {
       boton: 'Ver mis proyectos',
     },
 
+        habilidades: {
+      titulo: 'Ecosistema Tecnológico',
+      backend: {
+        titulo: 'Backend & Arquitectura',
+        items: ['C#', '.NET (Core/8/9)', 'Java', 'C/C++', 'ASP.NET Core', 'ASP.NET MVC', 'EF Core', 'CQRS (MediatR)', 'DDD', 'REST APIs', 'Arquitectura Limpia', 'Arquitectura en Capas', 'JWT / Seguridad'],
+      },
+      frontend: {
+        titulo: 'Frontend & UI',
+        items: ['Angular', 'React', 'Vue.js', 'Quasar Framework', 'Vuetify', 'TypeScript', 'JavaScript', 'HTML5/CSS3', 'Tailwind CSS', 'SCSS'],
+      },
+      bd: {
+        titulo: 'Bases de Datos',
+        items: ['SQL Server', 'PostgreSQL', 'SQLite', 'T-SQL', 'Procedimientos Almacenados', 'Diseño Relacional', 'Vistas SQL', 'Optimización'],
+      },
+      herramientas: {
+        titulo: 'Herramientas & IDEs',
+        items: ['Visual Studio', 'VS Code', 'IntelliJ IDEA', 'Android Studio', 'SSMS', 'Postman', 'Git', 'GitHub', 'GitLab', 'CI/CD', 'NVM'],
+      },
+      infra: {
+        titulo: 'Infraestructura & SO',
+        items: ['Linux (Fedora)', 'Ubuntu', 'Linux Mint', 'Windows', 'Docker', 'Sistemas Multi-Tenant', 'Bash / Shell', 'Flatpak / DNF'],
+      },
+      aptitudes: {
+        titulo: 'Aptitudes Analíticas',
+        items: ['Análisis de Requerimientos', 'Reglas de Negocio', 'Resolución de Problemas', 'Pensamiento Crítico', 'Sistemas Resilientes', 'Mantenibilidad'],
+      },
+    },
+    proyectos: {
+      titulo: 'Proyectos Destacados',
+      publico: 'Público',
+      privado: 'Privado',
+      tooltipPrivado: 'Repositorio Privado',
+      tooltipPublico: 'Ver en GitHub',
+      descripciones: [
+        'Presentación de página web interactiva para perfil de LinkedIn (Este mismo portafolio).',
+        'API RESTful integrada con Google Cloud y entrenada con ML.NET para la sincronización, análisis y clasificación predictiva de bandejas de correo.',
+        'Sistema de escritorio para un minisuper. Gestiona entrada y salida de productos, punto de venta y administración general.',
+        'Sistema empresarial diseñado para automatizar alertas de vencimiento, optimizar la administración de pólizas y agilizar la gestión de seguros obligatorios.',
+        'Arquitectura backend desarrollada para soportar la lógica de negocio, catálogo de piezas y procesamiento de órdenes de una plataforma de impresión 3D.',
+        'Interfaz web moderna y optimizada en UX/UI para un modelo de negocio B2C enfocado en la venta de productos manufacturados en 3D.',
+        'Plataforma administrativa orientada a centros de acondicionamiento físico, diseñada para gestionar membresías, perfiles de clientes y facturación de manera eficiente.',
+      ],
+    },
+    footer: {
+      tagline: 'Transformando reglas de negocio complejas en sistemas resilientes, escalables y de alto rendimiento.',
+      navegacion: 'Navegación',
+      conecta: 'Conecta Conmigo',
+      contacto: 'Contacto',
+      derechos: 'Todos los derechos reservados.',
+      construido: 'Construido con',
+    },
+
         filosofia: {
       titulo: 'Filosofía de Desarrollo',
       modelado: {
@@ -172,6 +224,58 @@ export const translations = {
         'Data Analyst',
       ],
       boton: 'View my projects',
+    },
+
+        habilidades: {
+      titulo: 'Technology Ecosystem',
+      backend: {
+        titulo: 'Backend & Architecture',
+        items: ['C#', '.NET (Core/8/9)', 'Java', 'C/C++', 'ASP.NET Core', 'ASP.NET MVC', 'EF Core', 'CQRS (MediatR)', 'DDD', 'REST APIs', 'Clean Architecture', 'Layered Architecture', 'JWT / Security'],
+      },
+      frontend: {
+        titulo: 'Frontend & UI',
+        items: ['Angular', 'React', 'Vue.js', 'Quasar Framework', 'Vuetify', 'TypeScript', 'JavaScript', 'HTML5/CSS3', 'Tailwind CSS', 'SCSS'],
+      },
+      bd: {
+        titulo: 'Databases',
+        items: ['SQL Server', 'PostgreSQL', 'SQLite', 'T-SQL', 'Stored Procedures', 'Relational Design', 'SQL Views', 'Optimization'],
+      },
+      herramientas: {
+        titulo: 'Tools & IDEs',
+        items: ['Visual Studio', 'VS Code', 'IntelliJ IDEA', 'Android Studio', 'SSMS', 'Postman', 'Git', 'GitHub', 'GitLab', 'CI/CD', 'NVM'],
+      },
+      infra: {
+        titulo: 'Infrastructure & OS',
+        items: ['Linux (Fedora)', 'Ubuntu', 'Linux Mint', 'Windows', 'Docker', 'Multi-Tenant Systems', 'Bash / Shell', 'Flatpak / DNF'],
+      },
+      aptitudes: {
+        titulo: 'Analytical Skills',
+        items: ['Requirements Analysis', 'Business Rules', 'Problem Solving', 'Critical Thinking', 'Resilient Systems', 'Maintainability'],
+      },
+    },
+    proyectos: {
+      titulo: 'Featured Projects',
+      publico: 'Public',
+      privado: 'Private',
+      tooltipPrivado: 'Private Repository',
+      tooltipPublico: 'View on GitHub',
+      descripciones: [
+        'Interactive web page presentation for my LinkedIn profile (this very portfolio).',
+        'RESTful API integrated with Google Cloud and trained with ML.NET for the synchronization, analysis and predictive classification of email inboxes.',
+        'Desktop system for a minimarket. Manages product inflow and outflow, point of sale and general administration.',
+        'Enterprise system designed to automate expiration alerts, optimize policy administration and streamline the management of mandatory insurance.',
+        'Backend architecture built to support the business logic, parts catalog and order processing of a 3D printing platform.',
+        'Modern, UX/UI-optimized web interface for a B2C business model focused on selling 3D-manufactured products.',
+        'Administrative platform for fitness centers, designed to efficiently manage memberships, client profiles and billing.',
+      ],
+    },
+    footer: {
+      tagline: 'Turning complex business rules into resilient, scalable and high-performance systems.',
+      navegacion: 'Navigation',
+      conecta: 'Connect With Me',
+      contacto: 'Contact',
+      derechos: 'All rights reserved.',
+      construido: 'Built with',
     },
 
         filosofia: {
