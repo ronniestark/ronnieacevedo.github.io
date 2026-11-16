@@ -135,7 +135,7 @@ const perfiles = t.inicio.perfiles;
         
         {/* Título Principal */}
         <h1 
-          className="animate-slide-up text-4xl sm:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400 tracking-tight drop-shadow-sm pb-2 px-1"
+          className="animate-slide-up text-4xl sm:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-slate-50 to-slate-400 tracking-tight drop-shadow-sm pb-2 px-1"
           style={{ animationDelay: '0.3s' }}
         >
           {t.inicio.titulo}

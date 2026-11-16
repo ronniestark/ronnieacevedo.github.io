@@ -10,6 +10,7 @@ import Contacto from '../components/Contacto';
 import Footer from '../components/Footer';
 import Experiencia from '../components/Experiencia';
 import LanguageToggle from '../components/LanguageToggle';
+import ThemeToggle from '../components/ThemeToggle';
 import { useLanguage } from '../i18n/LanguageContext';
 
 const Portfolio = () => {
@@ -70,7 +71,7 @@ const Portfolio = () => {
             className={`snap-center flex-shrink-0 flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 rounded-full text-[0.8rem] sm:text-sm font-medium transition-all duration-300 whitespace-nowrap ${
               activeTab === item.id
                 ? 'bg-blue-600/20 text-blue-400 shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] border border-blue-500/30'
-                : 'text-slate-400 hover:text-white hover:bg-slate-800/50'
+                : 'text-slate-400 hover:text-slate-50 hover:bg-slate-800/50'
             }`}
           >
             <Icon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
@@ -82,6 +83,7 @@ const Portfolio = () => {
       {/* Separador + botón de idioma, a la par de Contacto */}
       <span className="flex-shrink-0 w-px h-5 bg-slate-700/70 mx-1"></span>
       <LanguageToggle />
+      <ThemeToggle />
     </div>
   </div>
 </nav>

@@ -123,14 +123,14 @@ const Habilidades = () => {
               <div className={`absolute inset-0 bg-gradient-to-r ${sweep} translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 pointer-events-none`}></div>
 
               <div className="relative z-10">
-                <h3 className={`text-lg font-semibold text-white mb-5 flex items-center gap-2 transition-colors ${titleHover}`}>
+                <h3 className={`text-lg font-semibold text-slate-50 mb-5 flex items-center gap-2 transition-colors ${titleHover}`}>
                   <Icon className={`${iconColor} w-5 h-5`} /> {h[key].titulo}
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {h[key].items.map((tech) => (
                     <span
                       key={tech}
-                      className={`px-3 py-1.5 bg-slate-950/50 border border-slate-700/60 rounded-lg text-xs font-medium text-slate-300 hover:text-white hover:-translate-y-0.5 transition-all duration-300 cursor-default shadow-sm ${chip}`}
+                      className={`px-3 py-1.5 bg-slate-950/50 border border-slate-700/60 rounded-lg text-xs font-medium text-slate-300 hover:text-slate-50 hover:-translate-y-0.5 transition-all duration-300 cursor-default shadow-sm ${chip}`}
                     >
                       {tech}
                     </span>

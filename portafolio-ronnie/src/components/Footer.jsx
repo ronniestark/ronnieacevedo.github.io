@@ -29,7 +29,7 @@ const Footer = ({ setActiveTab }) => {
   ];
 
   return (
-    <footer className="relative w-full bg-[#05080f] overflow-hidden border-t border-slate-800/80 pt-14 md:pt-20 pb-8 text-slate-300 mt-auto">
+    <footer className="relative w-full bg-slate-900 dark:bg-[#05080f] overflow-hidden border-t border-slate-800/80 pt-14 md:pt-20 pb-8 text-slate-300 mt-auto">
 
       {/* Efecto de resplandor (Glow) de fondo para modernizar el diseño */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-2xl h-32 bg-blue-600/10 blur-[100px] pointer-events-none rounded-full"></div>
@@ -38,7 +38,7 @@ const Footer = ({ setActiveTab }) => {
 
         {/* Columna 1: Marca */}
         <div className="space-y-5 sm:col-span-2 lg:col-span-1">
-          <h2 className="text-2xl md:text-3xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-cyan-300 to-white drop-shadow-[0_0_15px_rgba(56,189,248,0.2)]">
+          <h2 className="text-2xl md:text-3xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-cyan-300 to-slate-50 drop-shadow-[0_0_15px_rgba(56,189,248,0.2)]">
             {t.inicio.titulo}
           </h2>
           <p className="text-sm text-slate-400 leading-relaxed max-w-sm">
@@ -87,8 +87,8 @@ const Footer = ({ setActiveTab }) => {
               </a>
             </li>
             <li>
-              <a href="https://github.com/ronniestark" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-slate-400 hover:text-white transition-all duration-300 ease-out group">
-                <ChevronRight size={14} className="text-slate-600 group-hover:text-white group-hover:translate-x-1.5 transition-all duration-300" />
+              <a href="https://github.com/ronniestark" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-slate-400 hover:text-slate-50 transition-all duration-300 ease-out group">
+                <ChevronRight size={14} className="text-slate-600 group-hover:text-slate-50 group-hover:translate-x-1.5 transition-all duration-300" />
                 <span className="group-hover:translate-x-0.5 transition-transform duration-300">GitHub</span>
               </a>
             </li>

@@ -128,7 +128,7 @@ const Experiencia = () => {
                 <div className="relative z-10">
                   <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-3 sm:gap-4 mb-5">
                     <div>
-                      <h3 className="text-xl sm:text-2xl font-bold text-white mb-1.5 leading-tight">{trabajo.puesto}</h3>
+                      <h3 className="text-xl sm:text-2xl font-bold text-slate-50 mb-1.5 leading-tight">{trabajo.puesto}</h3>
                       <h4 className="text-base sm:text-lg font-medium text-slate-300 flex items-center gap-2">
                         {trabajo.empresa}
                       </h4>

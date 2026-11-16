@@ -99,7 +99,7 @@ const Proyectos = () => {
                   <span className={`text-[10px] sm:text-xs px-2.5 py-1 rounded-full border font-semibold tracking-wide w-fit flex-shrink-0 mt-1 sm:mt-0 ${
                     repo.visibility === 'Public'
                       ? 'border-blue-500/30 text-blue-300 bg-blue-500/10'
-                      : 'border-red-900/50 text-red-400 bg-red-950/30'
+                      : 'border-red-500/30 text-red-400 bg-red-500/10'
                   }`}>
                     {repo.visibility === 'Public' ? p.publico : p.privado}
                   </span>

@@ -8,6 +8,10 @@ export const translations = {
       portafolio: 'Portafolio',
       contacto: 'Contacto',
     },
+    tema: {
+      claro: 'Cambiar a tema claro',
+      oscuro: 'Cambiar a tema oscuro',
+    },
     inicio: {
       titulo: 'Ing. Ronnie Acevedo',
       subtitulo: 'Soluciones Tecnológicas Integrales',
@@ -206,6 +210,10 @@ export const translations = {
       habilidades: 'Skills',
       portafolio: 'Portfolio',
       contacto: 'Contact',
+    },
+    tema: {
+      claro: 'Switch to light theme',
+      oscuro: 'Switch to dark theme',
     },
     inicio: {
       titulo: 'Eng. Ronnie Acevedo',

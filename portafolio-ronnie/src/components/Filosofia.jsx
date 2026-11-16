@@ -73,7 +73,7 @@ const Filosofia = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/0 via-emerald-500/5 to-emerald-500/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 pointer-events-none"></div>
 
             <div className="relative z-10">
-              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-3 group-hover:text-emerald-400 transition-colors">
+              <h3 className="text-xl font-bold text-slate-50 mb-4 flex items-center gap-3 group-hover:text-emerald-400 transition-colors">
                 <div className="p-2 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 group-hover:scale-110 transition-transform">
                   <Database className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" />
                 </div>
@@ -90,7 +90,7 @@ const Filosofia = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-purple-500/0 via-purple-500/5 to-purple-500/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 pointer-events-none"></div>
 
             <div className="relative z-10">
-              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-3 group-hover:text-purple-400 transition-colors">
+              <h3 className="text-xl font-bold text-slate-50 mb-4 flex items-center gap-3 group-hover:text-purple-400 transition-colors">
                 <div className="p-2 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-400 group-hover:scale-110 transition-transform">
                   <Box className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" />
                 </div>
@@ -107,7 +107,7 @@ const Filosofia = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 via-blue-500/5 to-blue-500/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 pointer-events-none"></div>
 
             <div className="relative z-10">
-              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-3 group-hover:text-blue-400 transition-colors">
+              <h3 className="text-xl font-bold text-slate-50 mb-4 flex items-center gap-3 group-hover:text-blue-400 transition-colors">
                 <div className="p-2 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-400 group-hover:scale-110 transition-transform">
                   <Layers className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" />
                 </div>
@@ -124,7 +124,7 @@ const Filosofia = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-red-500/0 via-red-500/5 to-red-500/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 pointer-events-none"></div>
 
             <div className="relative z-10">
-              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-3 group-hover:text-red-400 transition-colors">
+              <h3 className="text-xl font-bold text-slate-50 mb-4 flex items-center gap-3 group-hover:text-red-400 transition-colors">
                 <div className="p-2 rounded-xl bg-red-500/10 border border-red-500/20 text-red-400 group-hover:scale-110 transition-transform">
                   <ShieldCheck className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" />
                 </div>
@@ -147,7 +147,7 @@ const Filosofia = () => {
                 </div>
               </div>
               <div>
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                <h3 className="text-xl font-bold text-slate-50 mb-3 group-hover:text-cyan-400 transition-colors">
                   {f.ux.titulo}
                 </h3>
                 <p className="text-slate-400 leading-relaxed text-sm sm:text-base md:w-11/12">
